@@ -16,15 +16,81 @@
 		<title>Hello, world!</title>
 	</head>
 	<body>
-		<h1>Weather</h1>
-		<div class="row">
-			<div class="col-12">
-				<h5 id='myCity'></h5>
+		<div class="container-fluid">
+			<h1>Weather</h1>
+			<div class="row">
+				<div class="col-12">
+					<h5 id="myCity"></h5>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-12">
-				<p id='w'></p>
+			<div class="row">
+				<div class="col-12">
+					<p id="w"></p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<!-- Button trigger modal -->
+					<button
+						type="button"
+						class="btn btn-primary"
+						data-bs-toggle="modal"
+						data-bs-target="#exampleModal"
+						id="openModal"
+					>
+						Launch demo modal
+					</button>
+
+					<!-- Modal -->
+					<div
+						class="modal fade"
+						id="exampleModal"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Find city</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+										id="closeModal"
+									></button>
+								</div>
+								<div class="modal-body">
+									<div class="row">
+										<div class="col-12">
+											<p class="error" id="error"></p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-12 mb-2">
+											<label for="city">City</label>
+											<input type="text" name="city" id="city" />
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Close
+									</button>
+									<button type="button" class="btn btn-primary" id="findWeather">
+										Find weather
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
