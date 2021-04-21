@@ -29,7 +29,7 @@ const changeCity = () => {
   closeModal();
 };
 
-async function getWeather(city = 'London') {
+const getWeather = async (city = 'London') => {
   try {
     const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c6f720738d4ba0af3722fd5e0551d616&units=metric`);
     const wData = await response.json();
