@@ -44,6 +44,6 @@ const getWeather = async (city = 'London') => {
     const w = document.getElementById('w');
     w.innerHTML = 'Error!';
   }
-}
+};
 
 component();
